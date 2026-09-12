@@ -1,10 +1,14 @@
 <div align="center">
 
+<img src="docs/assets/banner.png" alt="ORF-5 — async 5-in-1 OSINT & reconnaissance framework" width="100%" />
+
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue?logo=python&logoColor=white)
 ![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20Linux%20%7C%20macOS%20%7C%20Termux-lightgrey)
 ![Engine](https://img.shields.io/badge/engine-asyncio%20%2B%20aiohttp-orange)
 ![Telegram](https://img.shields.io/badge/telegram%20bot-aiogram%203-2CA5E0?logo=telegram&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-green)
+[![Website](https://img.shields.io/badge/site-mohittt--vermaa.github.io-0d9488)](https://mohittt-vermaa.github.io/osint-recon-framework/)
+[![Codespaces](https://img.shields.io/badge/run%20in-GitHub%20Codespaces-1f6feb?logo=github)](https://codespaces.new/mohittt-vermaa/osint-recon-framework)
 
 # ORF-5
 
@@ -15,7 +19,7 @@ Nothing more, nothing less.
 Built on `asyncio` + `aiohttp`, so all probes run concurrently instead of one-by-one.
 Runs anywhere Python runs: Windows, Zorin OS, any Linux distro, macOS — even **Termux on your phone**.
 
-[Features](#what-it-does) · [Install](#installation) · [Usage](#usage) · [Telegram bot](#telegram-bot) · [Troubleshooting](#troubleshooting) · [⭐ Star it](#if-this-helped-you)
+[Features](#what-it-does) · [Install](#installation) · [Usage](#usage) · [Telegram bot](#telegram-bot) · [🌐 Website](https://mohittt-vermaa.github.io/osint-recon-framework/) · [⭐ Star it](#if-this-helped-you)
 
 </div>
 
@@ -52,6 +56,17 @@ they're reported as `BLOCKED`, so you know the difference between "no profile" a
 [+] Done.  BLOCKED: 4  FOUND: 6  NOT_FOUND: 10
 ```
 
+## Screenshots
+
+Real CLI output, rendered straight from actual sessions (regenerate any time with
+`python scripts/render_assets.py`):
+
+<p align="center">
+  <img src="docs/assets/shot_username.png" alt="username scan" width="96%" />
+  <img src="docs/assets/shot_metadata.png" alt="metadata extraction" width="96%" />
+  <img src="docs/assets/shot_breach.png" alt="k-anonymity breach check" width="96%" />
+</p>
+
 ## Requirements
 
 - Python **3.9 or newer** (3.11+ recommended)
@@ -69,6 +84,14 @@ they're reported as `BLOCKED`, so you know the difference between "no profile" a
 ## Installation
 
 Pick your platform. Every path ends the same way: `.venv` created, dependencies installed, `.env` ready.
+
+### ⚡ Zero-install — run it straight from GitHub
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/mohittt-vermaa/osint-recon-framework)
+
+No local setup at all: GitHub spins up a cloud devbox with everything pre-installed
+(thanks to `.devcontainer/`) and you're running `python main.py username …` in about a
+minute — from any device, including a phone.
 
 ### 📱 Android — Termux
 

@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ORF-5 — Async 5-in-1 OSINT &amp; Reconnaissance Framework</title>
+<meta name="description" content="ORF-5: async username recon, game stats, Open Graph metadata extraction and k-anonymity breach checks. Runs on Windows, Linux, macOS and Termux.">
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --line:#30363d; --text:#e6edf3;
+    --dim:#8b949e; --blue:#58a6ff; --green:#3fb950; --teal:#7dc7e7; --yellow:#d29922;
+  }
+  *{box-sizing:border-box; margin:0}
+  body{background:var(--bg); color:var(--text); font:16px/1.6 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--blue); text-decoration:none}
+  .wrap{max-width:1060px; margin:0 auto; padding:0 22px}
+  header{position:sticky; top:0; z-index:5; background:rgba(13,17,23,.92); border-bottom:1px solid var(--line); backdrop-filter:blur(6px)}
+  nav{display:flex; align-items:center; gap:22px; padding:14px 0}
+  nav .logo{font-weight:800; font-size:20px; letter-spacing:.5px}
+  nav .logo b{color:var(--teal)}
+  nav a.link{color:var(--dim); font-size:14px}
+  nav a.link:hover{color:var(--text)}
+  nav .gh{margin-left:auto; background:#238636; color:#fff; padding:7px 16px; border-radius:8px; font-size:14px; font-weight:600}
+  nav .gh:hover{background:#2ea043}
+  .hero img.banner{width:100%; border-radius:14px; border:1px solid var(--line); display:block}
+  .hero{padding:42px 0 8px}
+  .hero h1{font-size:34px; margin:22px 0 6px}
+  .hero p.sub{color:var(--dim); max-width:760px; font-size:17px}
+  .cta{display:flex; gap:12px; margin:22px 0 10px; flex-wrap:wrap}
+  .btn{padding:10px 18px; border-radius:9px; font-weight:600; font-size:15px; border:1px solid transparent}
+  .btn.star{background:#238636; color:#fff}
+  .btn.star:hover{background:#2ea043}
+  .btn.codespace{border-color:var(--blue); color:var(--blue)}
+  .btn.codespace:hover{background:rgba(88,166,255,.1)}
+  .badges{margin:14px 0 6px; display:flex; gap:8px; flex-wrap:wrap}
+  .badges img{height:22px}
+  section{padding:52px 0 6px}
+  h2{font-size:24px; margin-bottom:16px; padding-bottom:8px; border-bottom:1px solid var(--line)}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:14px}
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px}
+  .card h3{font-size:16px; margin-bottom:6px}
+  .card h3 span{color:var(--teal); margin-right:8px}
+  .card p{color:var(--dim); font-size:14.5px}
+  .card code{color:var(--green)}
+  .shot{margin:16px 0}
+  .shot img{width:100%; border-radius:12px; border:1px solid var(--line)}
+  .tabs{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px}
+  .tab{background:var(--panel); border:1px solid var(--line); color:var(--dim); padding:7px 14px; border-radius:8px; cursor:pointer; font-size:14px}
+  .tab.on{color:var(--text); border-color:var(--blue)}
+  pre{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px; overflow-x:auto; font:13.5px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; color:#c9d1d9}
+  .pane{display:none}
+  .pane.on{display:block}
+  footer{margin:70px 0 40px; color:var(--dim); font-size:14px; border-top:1px solid var(--line); padding-top:22px}
+  footer b{color:var(--yellow)}
+  @media (max-width:640px){ .hero h1{font-size:27px} nav{gap:14px} }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <span class="logo">ORF<b>-5</b></span>
+      <a class="link" href="#features">Features</a>
+      <a class="link" href="#screenshots">Screenshots</a>
+      <a class="link" href="#install">Install</a>
+      <a class="link" href="#bot">Telegram</a>
+      <a class="gh" href="https://github.com/mohittt-vermaa/osint-recon-framework">⭐ Star on GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap hero">
+  <img class="banner" src="assets/banner.png" alt="ORF-5 — async 5-in-1 OSINT &amp; reconnaissance framework">
+  <h1>ORF-5 — an async 5-in-1 OSINT &amp; reconnaissance toolkit</h1>
+  <p class="sub">Point it at a username, a game UID, a URL or an email — it tells you what's public.
+     Built on <code style="color:var(--green)">asyncio + aiohttp</code>, so every probe runs concurrently.
+     Runs on Windows, Zorin OS / any Linux, macOS and Termux on your phone.</p>
+  <div class="cta">
+    <a class="btn star" href="https://github.com/mohittt-vermaa/osint-recon-framework">⭐ Star this repo if you like it</a>
+    <a class="btn codespace" href="https://codespaces.new/mohittt-vermaa/osint-recon-framework">▶ Run it in GitHub Codespaces</a>
+  </div>
+  <div class="badges">
+    <img src="https://img.shields.io/badge/python-3.9%2B-blue?logo=python&logoColor=white" alt="Python 3.9+">
+    <img src="https://img.shields.io/badge/platforms-Windows%20%7C%20Linux%20%7C%20macOS%20%7C%20Termux-lightgrey" alt="Platforms">
+    <img src="https://img.shields.io/badge/engine-asyncio%20%2B%20aiohttp-orange" alt="Engine">
+    <img src="https://img.shields.io/badge/telegram%20bot-aiogram%203-2CA5E0?logo=telegram&logoColor=white" alt="Telegram">
+    <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT">
+  </div>
+</div>
+
+<div class="wrap" id="features">
+  <section>
+    <h2>What's inside</h2>
+    <div class="grid">
+      <div class="card"><h3><span>01</span>Username Recon</h3>
+        <p>Profile existence across 20 social &amp; gaming networks, judged by HTTP status + body rules.
+        Platforms live in a JSON file — add your own without touching code. <code>python main.py username &lt;handle&gt;</code></p></div>
+      <div class="card"><h3><span>02</span>Game Stats Inspector</h3>
+        <p>Public player data by UID or name — Free Fire MAX and PUBG (official developer API).
+        <code>python main.py gamestats --game freefire --id …</code></p></div>
+      <div class="card"><h3><span>03</span>Metadata Extractor</h3>
+        <p>Open Graph / Twitter Card tags (<code>og:image</code>, <code>og:description</code>, …) from any public page, via BeautifulSoup4. No login, ever.</p></div>
+      <div class="card"><h3><span>04</span>Breach Exposure Checker</h3>
+        <p>k-Anonymity SHA-1 range queries against HaveIBeenPwned — only a 5-character hash prefix ever leaves your machine.</p></div>
+      <div class="card"><h3><span>05</span>Dual Interface</h3>
+        <p>A full argparse CLI and an asynchronous Telegram bot (aiogram 3) driven by the same engine. One codebase, two front doors.</p></div>
+      <div class="card"><h3><span>⚡</span>Honest results</h3>
+        <p>Sites that reject bots aren't faked — they're reported as <b style="color:var(--yellow)">BLOCKED</b>, so you always know the difference between "no profile" and "couldn't tell".</p></div>
+    </div>
+  </section>
+
+  <section id="screenshots">
+    <h2>Screenshots</h2>
+    <div class="shot"><img src="assets/shot_username.png" alt="ORF-5 username scan in a terminal"></div>
+    <div class="shot"><img src="assets/shot_metadata.png" alt="ORF-5 metadata extraction"></div>
+    <div class="shot"><img src="assets/shot_breach.png" alt="ORF-5 breach check"></div>
+  </section>
+
+  <section id="install">
+    <h2>Install anywhere</h2>
+    <div class="tabs">
+      <button class="tab on" data-t="termux">📱 Termux</button>
+      <button class="tab" data-t="linux">🐧 Linux / Zorin</button>
+      <button class="tab" data-t="macos">🍎 macOS</button>
+      <button class="tab" data-t="win">🪟 Windows</button>
+    </div>
+    <div class="pane on" id="t-termux"><pre>pkg update &amp;&amp; pkg install -y python git
+git clone https://github.com/mohittt-vermaa/osint-recon-framework.git
+cd osint-recon-framework
+bash install.sh
+source .venv/bin/activate
+python main.py username octocat</pre></div>
+    <div class="pane" id="t-linux"><pre>sudo apt install -y python3 python3-venv python3-pip git
+git clone https://github.com/mohittt-vermaa/osint-recon-framework.git
+cd osint-recon-framework
+bash install.sh
+source .venv/bin/activate
+python main.py username octocat</pre></div>
+    <div class="pane" id="t-macos"><pre>brew install python git
+git clone https://github.com/mohittt-vermaa/osint-recon-framework.git
+cd osint-recon-framework
+bash install.sh
+source .venv/bin/activate</pre></div>
+    <div class="pane" id="t-win"><pre>git clone https://github.com/mohittt-vermaa/osint-recon-framework.git
+cd osint-recon-framework
+install.bat          :: cmd
+.\install.ps1        :: PowerShell / Windows Terminal
+.venv\Scripts\activate</pre></div>
+  </section>
+
+  <section id="bot">
+    <h2>Telegram bot</h2>
+    <pre>echo "TELEGRAM_BOT_TOKEN=123456:ABC…" &gt;&gt; .env   # token from @BotFather
+python main.py bot
+
+# then, inside Telegram:
+/username octocat
+/gamestats freefire 1234567890
+/metadata https://github.com/octocat
+/breach someone@example.com</pre>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    MIT licensed · public-data only · use it responsibly.<br>
+    Built by <a href="https://github.com/mohittt-vermaa">@mohittt-vermaa</a> —
+    if ORF-5 saved you an evening, <b>leave a star ⭐</b>. It keeps the project alive.
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll(".tab").forEach(function (b) {
+    b.addEventListener("click", function () {
+      document.querySelectorAll(".tab").forEach(function (x) { x.classList.remove("on"); });
+      document.querySelectorAll(".pane").forEach(function (x) { x.classList.remove("on"); });
+      b.classList.add("on");
+      document.getElementById("t-" + b.dataset.t).classList.add("on");
+    });
+  });
+</script>
+</body>
+</html>
