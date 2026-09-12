@@ -7,3 +7,7 @@ results/
 *.log
 .idea/
 .vscode/
+
+# generated promo media — render locally, never commit
+*.mp4
+*.wav

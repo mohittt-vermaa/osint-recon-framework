@@ -264,9 +264,17 @@ of Windows or Linux before submitting.
 ### Social kit
 
 Sharing ORF-5 somewhere? Ready-made promo assets (banners, terminal screenshots,
-reel/YouTube cuts, QR code) and copy-paste captions for X / Instagram / YouTube
-live in [`social/`](social/) — regenerate the visuals any time with
-`python scripts/render_assets.py` and `python scripts/render_social.py`.
+QR code, stills) and copy-paste captions for X / Instagram / YouTube live in
+[`social/`](social/). The promo *videos* are generated locally in a minute or two
+(they're git-ignored so the repo stays light):
+
+```bash
+python scripts/render_assets.py    # banner + terminal screenshots
+python scripts/render_social.py    # post stills + QR
+python scripts/render_phonk.py     # 40s phonk cut (vertical + horizontal)
+python scripts/render_cine.py      # cinematic cut
+python scripts/render_clone.py     # reel-format clone cut
+```
 
 ## If this helped you…
 

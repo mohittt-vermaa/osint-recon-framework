@@ -1,5 +1,8 @@
 # ORF-5 — Social Promo Kit (copy & paste deck)
 
+Videos (`promo_*.mp4`, `phonk_*.mp4`, `clone_*.mp4`) are rendered locally with the
+`scripts/render_*.py` generators — kept out of git on purpose so clones stay fast.
+
 Which asset goes where:
 
 | Platform | Image | Video |
