@@ -21,7 +21,7 @@ try:  # optional .env support
 except ImportError:
     pass
 
-from core import logger
+from core import __version__, logger
 from core.engine import ReconEngine
 from core.utils import REPO_ROOT, RESULTS_DIR, save_json
 from modules import breach_checker, game_stats, metadata_extractor, username_recon
@@ -55,6 +55,7 @@ def build_parser() -> argparse.ArgumentParser:
         epilog=EXAMPLES,
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
+    parser.add_argument("--version", action="version", version=f"ORF-5 {__version__}")
     parser.add_argument("--timeout", type=float, default=15.0, help="total request timeout in seconds (default: 15)")
     parser.add_argument("--connect-timeout", type=float, default=8.0, help="connect timeout in seconds (default: 8)")
     parser.add_argument("--concurrency", type=int, default=20, help="max parallel requests (default: 20)")
