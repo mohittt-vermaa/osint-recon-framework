@@ -67,4 +67,4 @@ say "Done. Quick start:"
 echo "    source .venv/bin/activate"
 echo "    python main.py username octocat"
 echo
-say "If ORF-5 is useful to you, consider leaving a star on the repo. ⭐"
+say "Happy hacking."

@@ -46,7 +46,7 @@ Module 4 — breach exposure via k-anonymity: only a 5-char SHA-1 prefix ever
 leaves your machine. Plus Free Fire/PUBG stats and an OG-tag scraper.
 
 4/ It also ships as a Telegram bot, runs on Termux, and you can try it with
-one click in GitHub Codespaces. If it saves you an evening — star it ⭐
+one click in GitHub Codespaces. Free & open source — MIT licensed
 github.com/mohittt-vermaa/osint-recon-framework
 ```
 
@@ -73,7 +73,7 @@ ORF-5 — a 5-in-1 async OSINT & recon framework:
 [+] CLI + Telegram bot
 
 Runs on Windows, Linux, macOS and even Termux on your phone.
-Scan the QR or hit the link in bio → star it if you like it ⭐
+Scan the QR or hit the link in bio → free & open source — link above
 
 #osint #cybersecurity #hacking #infosec #python #programming
 #opensource #termux #linux #ethicalhacking #bugbounty #github
@@ -115,7 +115,7 @@ HaveIBeenPwned — plus a CLI and a Telegram bot.
 00:03 The five modules
 00:06 Username recon — live scan
 00:10 k-anonymity breach check
-00:13 Star it if you like it
+00:13 Get the code — free & open source
 
 Public-data only. Use responsibly and respect platform ToS.
 
@@ -133,7 +133,7 @@ asyncio aiohttp, telegram bot python, free osint framework, github projects
 ### Pinned comment
 
 ```
-Code is free on GitHub — star it if it helped you ⭐
+Code is free on GitHub — MIT licensed
 https://github.com/mohittt-vermaa/osint-recon-framework
 ```
 
@@ -146,7 +146,7 @@ https://github.com/mohittt-vermaa/osint-recon-framework
 Username recon across twenty networks in about a second.
 Game stats, metadata scraping, and k-anonymity breach checks —
 nothing private ever leaves your machine.
-Free and open source. Star it if you like it."
+Free and open source — link below."
 ```
 
 Want me to generate this voice-over as an MP3 with a narrator voice? Say the word.

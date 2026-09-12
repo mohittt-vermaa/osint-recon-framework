@@ -36,5 +36,5 @@ echo [orf5] Done. Quick start:
 echo     .venv\Scripts\activate
 echo     python main.py username octocat
 echo.
-echo [orf5] If ORF-5 is useful to you, consider leaving a star on the repo.
+echo [orf5] Happy hacking.
 endlocal

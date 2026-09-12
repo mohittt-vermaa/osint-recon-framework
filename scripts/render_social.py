@@ -123,7 +123,7 @@ def slide_hook(W: int, H: int) -> Image.Image:
     d.text((W * 0.07, H * 0.215 + 290 * s), "async  ·  open source  ·  free forever",
            font=font(F_MONO, int(38 * s)), fill=DIM)
     pill(d, int(W * 0.07), int(H * 0.62), "ORF-5  ·  asyncio + aiohttp", font(F_MONO_B, int(34 * s)), CYAN, CYAN)
-    d.text((W * 0.07, H * 0.80), "follow the build → star it if you like it",
+    d.text((W * 0.07, H * 0.80), "open source · runs on windows / linux / termux",
            font=font(F_MONO, int(32 * s)), fill=YELLOW)
     return img
 
@@ -155,8 +155,8 @@ def slide_cta(W: int, H: int) -> Image.Image:
     img = bg(W, H)
     d = ImageDraw.Draw(img)
     s = H / 1920
-    d.text((W / 2, H * 0.16), "STAR IT IF YOU LIKE IT", font=font(F_SANS_B, int(88 * s)), fill=YELLOW, anchor="mm")
-    d.text((W / 2, H * 0.235), "fork it, break it, make it yours — MIT license",
+    d.text((W / 2, H * 0.16), "FREE & OPEN SOURCE", font=font(F_SANS_B, int(88 * s)), fill=YELLOW,           anchor="mm")
+    d.text((W / 2, H * 0.235), "fork it · run it · make it yours — MIT license",
            font=font(F_MONO, int(34 * s)), fill=DIM, anchor="mm")
     q = qr(int(360 * s))
     pad = 18
@@ -199,7 +199,7 @@ def still_square() -> Image.Image:
     d.rounded_rectangle((W - 200 - 26 - 14, H - 200 - 110 - 14, W - 14, H - 96), radius=16, fill=(255, 255, 255))
     img.paste(q, (W - 200 - 26, H - 200 - 110))
     pill(d, 60, H - 150, REPO_URL, font(F_MONO_B, 26), CYAN, CYAN)
-    d.text((60, H - 78), HANDLE + "  ·  star it if you like it", font=font(F_MONO, 26), fill=YELLOW)
+    d.text((60, H - 78), HANDLE + "  ·  free & open source · MIT", font=font(F_MONO, 26), fill=YELLOW)
     return img
 
 
@@ -221,7 +221,7 @@ def still_story() -> Image.Image:
     img.paste(q, ((W - 300) // 2, 1180))
     d.text((W / 2, 1560), "scan · clone · run", font=font(F_MONO, 32), fill=DIM, anchor="mm")
     d.text((W / 2, 1650), REPO_URL, font=font(F_MONO_B, 34), fill=CYAN, anchor="mm")
-    d.text((W / 2, 1740), "STAR IT IF YOU LIKE IT", font=font(F_SANS_B, 48), fill=YELLOW, anchor="mm")
+    d.text((W / 2, 1740), "FREE & OPEN SOURCE · MIT", font=font(F_SANS_B, 44), fill=YELLOW, anchor="mm")
     return img
 
 
@@ -242,7 +242,7 @@ def still_wide() -> Image.Image:
     img.paste(q, (W - 230 - 80, 130))
     d.text((W - 230 - 80 + 115, 400), "scan me", font=font(F_MONO, 28), fill=DIM, anchor="mm")
     pill(d, 72, H - 130, REPO_URL, font(F_MONO_B, 30), CYAN, CYAN)
-    d.text((700, H - 92), HANDLE + "  ·  star it if you like it", font=font(F_MONO, 28), fill=YELLOW)
+    d.text((700, H - 92), HANDLE + "  ·  free & open source", font=font(F_MONO, 28), fill=YELLOW)
     return img
 
 
@@ -288,13 +288,7 @@ def main() -> None:
     qr(480).save(SOCIAL / "qr.png")
     print("wrote stills + qr")
 
-    for fr_dir, (W, H) in ((FR_V, (1080, 1920)), (FR_H, (1920, 1080))):
-        slides = build_slides(W, H)
-        for i, im in enumerate(slides):
-            im.save(fr_dir / f"slide{i + 1}.png", optimize=True)
-        encode([fr_dir / f"slide{i + 1}.png" for i in range(len(slides))],
-               SOCIAL / ("promo_vertical.mp4" if W == 1080 else "promo_horizontal.mp4"),
-               W, H)
+    # videos are produced by scripts/render_reel.py (terminal-style reel cut)
 
 
 if __name__ == "__main__":
