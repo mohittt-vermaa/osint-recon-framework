@@ -1,0 +1,8 @@
+# ORF-5 — asynchronous OSINT & reconnaissance framework
+# Python >= 3.9 (tested on Windows 10/11 and Linux / Zorin OS)
+
+aiohttp>=3.9.5          # async HTTP client / core network engine
+beautifulsoup4>=4.12.3  # Open Graph / metadata parsing
+aiogram>=3.7.0          # async Telegram bot interface
+colorama>=0.4.6         # cross-platform ANSI colors (Windows console)
+python-dotenv>=1.0.1    # load tokens/keys from .env

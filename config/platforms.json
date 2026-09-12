@@ -1,0 +1,130 @@
+{
+  "$schema": "platforms.schema.v1",
+  "description": "Platform definitions for the Username Recon module. Add/remove entries freely. '{username}' in the URL is substituted. Match rules: found_status / not_found_status (HTTP codes), body_contains / body_not_contains (case-insensitive substrings checked against the response body).",
+  "defaults": {
+    "method": "GET",
+    "match": {
+      "found_status": [200],
+      "not_found_status": [404]
+    }
+  },
+  "platforms": [
+    {
+      "name": "GitHub",
+      "category": "development",
+      "url": "https://github.com/{username}"
+    },
+    {
+      "name": "GitLab",
+      "category": "development",
+      "url": "https://gitlab.com/{username}"
+    },
+    {
+      "name": "HackerNews",
+      "category": "community",
+      "url": "https://news.ycombinator.com/user?id={username}",
+      "match": {
+        "found_status": [200],
+        "not_found_status": [404],
+        "body_not_contains": ["No such user."]
+      }
+    },
+    {
+      "name": "Reddit",
+      "category": "social",
+      "url": "https://www.reddit.com/user/{username}"
+    },
+    {
+      "name": "Telegram",
+      "category": "messaging",
+      "url": "https://t.me/{username}",
+      "match": {
+        "found_status": [200],
+        "body_contains": ["tgme_page_title"]
+      }
+    },
+    {
+      "name": "Medium",
+      "category": "blogging",
+      "url": "https://medium.com/@{username}"
+    },
+    {
+      "name": "Instagram",
+      "category": "social",
+      "url": "https://www.instagram.com/{username}/"
+    },
+    {
+      "name": "X (Twitter)",
+      "category": "social",
+      "url": "https://x.com/{username}"
+    },
+    {
+      "name": "YouTube",
+      "category": "video",
+      "url": "https://www.youtube.com/@{username}"
+    },
+    {
+      "name": "DeviantArt",
+      "category": "art",
+      "url": "https://www.deviantart.com/{username}"
+    },
+    {
+      "name": "SoundCloud",
+      "category": "music",
+      "url": "https://soundcloud.com/{username}"
+    },
+    {
+      "name": "Vimeo",
+      "category": "video",
+      "url": "https://vimeo.com/{username}"
+    },
+    {
+      "name": "Patreon",
+      "category": "creator",
+      "url": "https://www.patreon.com/{username}"
+    },
+    {
+      "name": "About.me",
+      "category": "social",
+      "url": "https://about.me/{username}"
+    },
+    {
+      "name": "Keybase",
+      "category": "security",
+      "url": "https://keybase.io/{username}"
+    },
+    {
+      "name": "Gravatar",
+      "category": "social",
+      "url": "https://en.gravatar.com/{username}"
+    },
+    {
+      "name": "Chess.com",
+      "category": "gaming",
+      "url": "https://api.chess.com/pub/player/{username}",
+      "headers": {
+        "Accept": "application/json"
+      }
+    },
+    {
+      "name": "Steam Community",
+      "category": "gaming",
+      "url": "https://steamcommunity.com/id/{username}",
+      "match": {
+        "found_status": [200],
+        "not_found_status": [404],
+        "body_not_contains": ["The specified profile could not be found"]
+      }
+    },
+    {
+      "name": "Roblox",
+      "category": "gaming",
+      "url": "https://www.roblox.com/user.aspx?username={username}"
+    },
+    {
+      "name": "Twitch",
+      "category": "gaming",
+      "url": "https://www.twitch.tv/{username}"
+    }
+  ]
+}
