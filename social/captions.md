@@ -4,7 +4,7 @@ Which asset goes where:
 
 | Platform | Image | Video |
 |---|---|---|
-| Instagram post | `post_square.png` | `promo_vertical.mp4` (Reel) |
+| Instagram post | `post_square.png` | `promo_vertical.mp4` (cinematic reel) |
 | Instagram story | `story_reel.png` | `promo_vertical.mp4` |
 | X / Twitter post | `twitter_card.png` + `shot_username.png` | `promo_vertical.mp4` |
 | YouTube upload | thumbnail: `twitter_card.png` | `promo_horizontal.mp4` |
@@ -111,11 +111,12 @@ HaveIBeenPwned — plus a CLI and a Telegram bot.
 🌐 Website: https://mohittt-vermaa.github.io/osint-recon-framework/
 ▶ Run it in your browser (no install): GitHub Codespaces link on the repo
 
-00:00 What is ORF-5
-00:03 The five modules
-00:06 Username recon — live scan
-00:10 k-anonymity breach check
-00:13 Get the code — free & open source
+00:00 The question gets typed
+00:05 Module picker — full sweep
+00:07 Scan.
+00:08 Surface.
+00:10 Verify.
+00:12 ORF-5 — free & open source, link on screen
 
 Public-data only. Use responsibly and respect platform ToS.
 
