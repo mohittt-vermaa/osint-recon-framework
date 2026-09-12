@@ -77,7 +77,7 @@ Works in the stock Termux app (F-Droid build recommended; the Play Store build i
 ```bash
 pkg update && pkg upgrade -y
 pkg install -y python git
-git clone https://github.com/YOUR_USERNAME/osint-recon-framework.git
+git clone https://github.com/mohittt-vermaa/osint-recon-framework.git
 cd osint-recon-framework
 bash install.sh
 source .venv/bin/activate
@@ -94,7 +94,7 @@ Zorin is Ubuntu-based, so plain `apt` works. This covers GNOME Terminal, Konsole
 ```bash
 sudo apt update
 sudo apt install -y python3 python3-venv python3-pip git
-git clone https://github.com/YOUR_USERNAME/osint-recon-framework.git
+git clone https://github.com/mohittt-vermaa/osint-recon-framework.git
 cd osint-recon-framework
 bash install.sh
 source .venv/bin/activate
@@ -104,7 +104,7 @@ Fedora:
 
 ```bash
 sudo dnf install -y python3 git
-git clone https://github.com/YOUR_USERNAME/osint-recon-framework.git
+git clone https://github.com/mohittt-vermaa/osint-recon-framework.git
 cd osint-recon-framework && bash install.sh && source .venv/bin/activate
 ```
 
@@ -112,7 +112,7 @@ Arch / Manjaro:
 
 ```bash
 sudo pacman -S --needed python git
-git clone https://github.com/YOUR_USERNAME/osint-recon-framework.git
+git clone https://github.com/mohittt-vermaa/osint-recon-framework.git
 cd osint-recon-framework && bash install.sh && source .venv/bin/activate
 ```
 
@@ -120,7 +120,7 @@ cd osint-recon-framework && bash install.sh && source .venv/bin/activate
 
 ```bash
 brew install python git
-git clone https://github.com/YOUR_USERNAME/osint-recon-framework.git
+git clone https://github.com/mohittt-vermaa/osint-recon-framework.git
 cd osint-recon-framework
 bash install.sh
 source .venv/bin/activate
@@ -138,7 +138,7 @@ Then clone and run the matching installer for your terminal:
 
 **cmd / Command Prompt**
 ```bat
-git clone https://github.com/YOUR_USERNAME/osint-recon-framework.git
+git clone https://github.com/mohittt-vermaa/osint-recon-framework.git
 cd osint-recon-framework
 install.bat
 .venv\Scripts\activate
@@ -146,7 +146,7 @@ install.bat
 
 **PowerShell / Windows Terminal**
 ```powershell
-git clone https://github.com/YOUR_USERNAME/osint-recon-framework.git
+git clone https://github.com/mohittt-vermaa/osint-recon-framework.git
 cd osint-recon-framework
 .\install.ps1
 .venv\Scripts\Activate.ps1
