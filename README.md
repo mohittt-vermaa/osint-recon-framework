@@ -261,6 +261,13 @@ Found a platform worth adding, a provider that died, or a bug? Open an issue or 
 details in [CONTRIBUTING.md](CONTRIBUTING.md). Keep changes focused and test on at least one
 of Windows or Linux before submitting.
 
+### Social kit
+
+Sharing ORF-5 somewhere? Ready-made promo assets (banners, terminal screenshots,
+reel/YouTube cuts, QR code) and copy-paste captions for X / Instagram / YouTube
+live in [`social/`](social/) — regenerate the visuals any time with
+`python scripts/render_assets.py` and `python scripts/render_social.py`.
+
 ## If this helped you…
 
 ORF-5 is built and maintained in spare time. If it saved you an evening or taught you
